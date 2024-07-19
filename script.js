@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const email = document.getElementById('email').value;
 
-        fetch('http://https://rothbard-backend.onrender.com/subscribe', { // Ensure this URL matches your local server endpoint
+        fetch('https://rothbard-backend.onrender.com/subscribe', { // Ensure this URL matches your local server endpoint
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
