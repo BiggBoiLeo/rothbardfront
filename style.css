@@ -231,7 +231,7 @@ nav .dropdown {
 @media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
-        height: 80vh;
+        height: auto;
     }
 }
 
@@ -504,6 +504,6 @@ footer .links a img {
 }
 @media (max-width: 768px) {
     .coming-soon{
-        height: 80vh;
+        height: auto;
     }
 }
