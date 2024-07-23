@@ -279,7 +279,7 @@ nav .dropdown {
 
 .quote .container img {
     flex: 1;
-    max-width: 50%;
+    max-width: 400px;
     height: auto;
     border: 2px double #052E54;
     padding: 10px;
