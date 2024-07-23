@@ -232,6 +232,7 @@ nav .dropdown {
 .about .container {
     border: 2px solid #052E54;
     padding: 20px;
+    width: 90%;
 }
 
 .about h2 {
@@ -249,6 +250,10 @@ nav .dropdown {
     box-sizing: border-box; /* Ensure padding is included in the width */
     background-color: #052E54;
     color: white;
+}
+
+.services .container{
+    width: 90%;
 }
 
 .services h2 {
@@ -307,7 +312,8 @@ nav .dropdown {
     }
 
     .quote .container img {
-        max-width: 80%;
+        width: 100%;
+        height: auto;
         margin-bottom: 20px;
         order: 1;
     }
