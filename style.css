@@ -302,7 +302,6 @@ nav .dropdown {
 /* Footer */
 footer {
     color: #ccc;
-    width: 100%;
     justify-content: center;
     display: flex;
     flex-direction: column;
