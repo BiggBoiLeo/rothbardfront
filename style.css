@@ -10,7 +10,7 @@ body {
 }
 
 .section {
-    width: 100%;
+    width: 80%;
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
@@ -213,6 +213,12 @@ nav .dropdown {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: local;
+    }
 }
 
 /* About Section */
