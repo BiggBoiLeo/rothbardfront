@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('JavaScript loaded');
 
+    function toggleDropdown() {
+        var content = document.querySelector('.dropdown-content');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }    
+
     const links = document.querySelectorAll('a[href^="#"]');
 
     for (const link of links) {

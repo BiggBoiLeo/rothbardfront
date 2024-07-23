@@ -13,13 +13,27 @@
 <header>
     <div class="container">
         <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"></a>
-        <nav id="nav">
+        <nav>
+            <div class="dropdown">
+                <button onclick="toggleDropdown()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="#footer">Contact</a>
+                    <a href="landing.html">Sign Up</a>
+                </div>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#footer">Contact</a></li>
                 <li><a href="landing.html">Sign Up</a></li>
             </ul>
         </nav>
+        
+        
     </div>
 </header>
 
