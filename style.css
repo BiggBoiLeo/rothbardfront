@@ -6,12 +6,16 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px; /* Add max-width to container */
     margin: auto;
+    padding: 0 10px; /* Add padding to avoid overflow issues */
 }
+
 /* Header */
 header {
     background-color: #052E54;
@@ -20,22 +24,22 @@ header {
 
 header .container {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between logo and navigation */
-    max-width: 1200px; /* Add a max width for better centering */
-    margin: 0 auto; /* Center the container horizontally */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
 }
 
 .logo {
     flex-shrink: 0;
-    width: auto; /* Allow the logo to size proportionally */
-    max-width: 200px; /* Adjust maximum width as needed */
+    width: auto;
+    max-width: 200px;
 }
 
 nav {
     flex-grow: 1;
-    text-align: right; /* Align navigation items to the right */
+    text-align: right;
 }
 
 /* Base styles */
@@ -44,24 +48,24 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
 }
 
 nav ul li {
     text-align: center;
     background-color: #052E54;
     border: 1px solid white;
-    flex: 1; /* Make navigation items flexible */
+    flex: 1;
 }
 
 nav ul li a {
     display: block;
-    padding: 15px 30px; /* Adjust padding to make boxes equal height */
+    padding: 15px 30px;
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     box-sizing: border-box;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -73,28 +77,27 @@ nav ul li a:hover {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul li {
-        width: 100%; /* Make navigation items full width */
-        margin-left: 0; /* Remove horizontal spacing */
-        margin-bottom: 10px; /* Add vertical spacing */
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
     nav ul li a {
-        padding: 10px 20px; /* Adjust padding for smaller screens */
+        padding: 10px 20px;
     }
 }
 
 /* Reduce width when horizontal */
 @media (min-width: 769px) {
     nav ul li {
-        max-width: 150px; /* Limit the width of the navigation items */
+        max-width: 150px;
     }
 }
-
 
 /* Hero Section */
 .hero {
@@ -111,14 +114,13 @@ nav ul li a:hover {
     color: white;
 }
 
-
-.hero .overlay{
+.hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -139,7 +141,7 @@ nav ul li a:hover {
 }
 
 .hero .btn {
-    background-color: 	#c7884a;
+    background-color: #c7884a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -149,8 +151,9 @@ nav ul li a:hover {
 }
 
 .hero .btn:hover {
-    background-color: #8b5a2b; /* Darkened Gold */
+    background-color: #8b5a2b;
 }
+
 .btn {
     background-color: #e67e22;
     color: white;
@@ -158,14 +161,14 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
 }
+
 /* About Section */
 .about {
     padding: 50px 0;
     color: #052E54;
-
 }
 
-.about .container{
+.about .container {
     border: 2px solid #052E54;
     padding: 20px;
 }
@@ -201,7 +204,7 @@ nav ul li a:hover {
     border-bottom: 1px solid #ccc;
 }
 
-/*Quote Section*/
+/* Quote Section */
 .quote {
     position: relative;
     padding: 50px 0;
@@ -210,90 +213,91 @@ nav ul li a:hover {
 
 .quote .container {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: space-around; /* Equal spacing between items and edges */
-    padding: 20px; /* Padding inside the box */
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .quote .container img {
-    flex: 1; /* Allow image to grow or shrink */
-    max-width: 50%; /* Limit image width */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px double #052E54; /* Border style */
-    padding: 10px; /* Padding inside the border */
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border: 2px double #052E54;
+    padding: 10px;
 }
 
 .quote h2 {
-    flex: 0 0 30%; /* Set text to take up 30% of available width */
+    flex: 0 0 30%;
     font-size: 24px;
-    text-align: center; /* Center text horizontally */
-    margin: 0; /* Reset margin */
+    text-align: center;
+    margin: 0;
     color: #052E54;
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
     .quote .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+        align-items: center;
     }
 
     .quote .container img {
-        max-width: 80%; /* Adjust image width for small screens */
-        margin-bottom: 20px; /* Add space below the image */
+        max-width: 80%;
+        margin-bottom: 20px;
         order: 1;
     }
 
     .quote h2 {
-        flex: 1; /* Allow text to grow or shrink */
-        width: 100%; /* Ensure text takes up full width */
+        flex: 1;
+        width: 100%;
         order: 2;
     }
 }
 
-
 /* Footer */
-
 footer {
     color: #ccc;
     width: 100%;
     justify-content: center;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #052E54; /* Apply background color to footer */
+    background-color: #052E54;
 }
 
 footer .container {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px; /* Add some padding to the sides */
+    padding: 0 20px;
 }
 
 footer ul {
     display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on small screens */
     justify-content: center;
     width: 100%;
-    padding: 0; /* Remove default padding */
-    list-style-type: none; /* Remove default list style */
-    margin: 0; /* Remove default margin */
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
 }
 
 footer ul li {
-    border: 1px solid #ccc; /* Add solid border */
+    border: 1px solid #ccc;
     border-radius: 2px;
     display: flex;
-    flex-direction: column; /* Ensure content inside the li is stacked vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 0; /* Remove default margin */
-    width: 33.33%; /* Adjust width to ensure they fit side by side */
+    margin: 0;
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 150px; /* Ensure a minimum width */
     text-align: center;
+    box-sizing: border-box;
 }
 
 footer .links {
@@ -301,25 +305,24 @@ footer .links {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 10px; /* Add margin-top to space below list */
-    padding: 0 20px; /* Add some padding to the sides */
+    margin-top: 10px;
+    padding: 0 20px;
 }
 
 footer .links p,
 footer .links a {
-    margin: 0 10px; /* Add some spacing between elements */
+    margin: 0 10px;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
 }
 
 footer .links a img {
-    width: 5%; /* Adjust width as needed */
+    width: 5%;
     vertical-align: middle;
 }
 
-/*coming soon section*/
-
+/* Coming Soon Section */
 .coming-soon {
     background-image: url('images/boston-night.jpg');
     background-size: cover;
@@ -331,37 +334,37 @@ footer .links a img {
     position: relative;
 }
 
-.coming-soon .overlay{
+.coming-soon .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
-.coming-soon .content{
+.coming-soon .content {
     position: relative;
     z-index: 2;
     padding: 20px;
-    text-align: center; /* Center the text */
+    text-align: center;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically within the content div */
-    align-items: center; /* Center items horizontally within the content div */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.coming-soon .content h1{
+.coming-soon .content h1 {
     font-size: 48px;
 }
 
-.coming-soon .content p{
+.coming-soon .content p {
     font-size: 24px;
 }
 
 .coming-soon .btn {
-    background-color: 	#c7884a;
+    background-color: #c7884a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -371,15 +374,15 @@ footer .links a img {
 }
 
 .coming-soon .btn:hover {
-    background-color: #8b5a2b; /* Darkened Gold */
+    background-color: #8b5a2b;
 }
 
-.coming-soon .input{
-        color: #052E54;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        text-decoration: none;
-        margin-right: -4px;
+.coming-soon .input {
+    color: #052E54;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: -4
 }
