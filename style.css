@@ -486,3 +486,8 @@ footer .links a img {
     text-decoration: none;
     margin-right: -4
 }
+@media (max-width: 768px) {
+    .coming-soon{
+    background-attachment: scroll;
+    }
+}
