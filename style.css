@@ -217,7 +217,7 @@ nav .dropdown {
 
 @media (max-width: 768px) {
     .hero {
-        background-attachment: local;
+        background-attachment: scroll;
     }
 }
 

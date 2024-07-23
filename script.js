@@ -26,12 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if (currentPath === '/index.html' || currentPath === '/') {
-        window.history.replaceState(null, '', '/home');
-    } else if (currentPath === '/landing.html') {
-        window.history.replaceState(null, '', '/sign-up');
-    }
-
     const signupForm = document.getElementById('signup-form');
     signupForm.addEventListener('submit', function(event) {
         event.preventDefault();
