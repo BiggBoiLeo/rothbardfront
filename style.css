@@ -1,4 +1,6 @@
 /* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
 body {
     background-color: #faf0e6;
     color: #333;
@@ -9,16 +11,16 @@ body {
 }
 
 button{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Source Serif 4", serif;
 }
 
 h1,h2, h3, h4, h5, h6{
-    font-family: "Baskervville SC", serif;
-    font-weight: 300;
+    font-family: "Prata", serif;
+    font-weight: 400;
 }
 
 p, a{
-    font-family: "Times New Roman", serif;
+    font-family: "Source Serif 4", serif;
     font-weight: normal;
 }
 
@@ -138,7 +140,7 @@ nav .dropdown {
     }
 
     nav .dropdown-content a {
-        color: #ccc;
+        color: white;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -237,17 +239,28 @@ nav .dropdown {
 
 /* About Section */
 .about {
-    width: 100%;
+    width: 80%;
     padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
     color: #052E54;
     text-align: justify;
+    background-color: #faf0e6;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.about .keys{
+    width: 100%;
+    max-width: 200px;
 }
 
 .about .container {
-    border: 2px solid #052E54;
+    border: 3px solid #052E54;
     padding: 20px;
     width: 90%;
+    border-radius: 10px;
+    max-width: 600px;
 }
 
 .about h2 {
@@ -257,6 +270,27 @@ nav .dropdown {
 .about p {
     font-size: 18px;
 }
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        order: 1;
+    }
+
+    .about .container {
+        flex: 1;
+        width: 100%;
+        order: 2;
+    }
+}
+
 
 /* Services Section */
 .services {
@@ -269,6 +303,7 @@ nav .dropdown {
 
 .services .container{
     width: 90%;
+    border-radius: 10px;
 }
 
 .services h2 {
@@ -278,13 +313,13 @@ nav .dropdown {
 .services ul {
     list-style: none;
     padding: 0;
-    border-bottom: 1px #ccc;
+    border-bottom: 3px #052E54;
 }
 
 .services ul li {
     font-size: 18px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid white;
 }
 
 /* Quote Section */
@@ -308,6 +343,7 @@ nav .dropdown {
     max-width: 400px;
     height: auto;
     border: 2px double #052E54;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -343,7 +379,7 @@ nav .dropdown {
 
 /* Footer */
 footer {
-    color: #ccc;
+    color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -376,7 +412,7 @@ footer ul {
 }
 
 footer ul li {
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 2px;
     display: flex;
     flex-direction: column;
@@ -505,5 +541,74 @@ footer .links a img {
 @media (max-width: 768px) {
     .coming-soon{
         height: auto;
+    }
+}
+
+.help {
+    padding: 20px; /* Space around the section */
+    text-align: center; /* Center the grid container */
+    width: 80%;
+    margin: auto;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between thumbnails */
+    justify-content: center; /* Center the grid items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space between rows of thumbnails */
+    max-width: 100%; /* Ensure the grid container doesn’t exceed the width */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+}
+
+.videos a {
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Max width of the thumbnail */
+    max-height: 168.75px; /* Max height for the thumbnail */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* Center thumbnails within the grid container */
+}
+
+.videos a::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.videos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a cleaner look */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.videos img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+@media (max-width: 900px) {
+    .help {
+        width: 60%;
+        padding: 20px 10px; /* Add more space on sides and bottom for small screens */
+    }
+
+    .videos {
+        grid-template-columns: 1fr; /* Stack thumbnails in a single column */
+        gap: 20px; /* Increase gap for stacked layout */
+        margin-bottom: 30px; /* Add more space between rows */
+    }
+
+    .videos a {
+        max-width: 90%; /* Full width of the container with some padding */
+        max-height: 56.25vw; /* Adjust height based on viewport width to maintain 16:9 aspect ratio */
     }
 }
