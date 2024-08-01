@@ -1,5 +1,5 @@
 /* General Styles */
-@import url("https://fonts.googleapis.com/css2?family=Prata&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
 
 body {
     margin: 0;
@@ -9,17 +9,18 @@ body {
 }
 
 button{
-    font-family: "Source Serif 4", serif;
+    font-family: "Neuton", serif;
 }
 
 h1,h2, h3, h4, h5, h6{
-    font-family: "Prata", serif;
-    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 p, a{
-    font-family: "Source Serif 4", serif;
-    font-weight: normal;
+    font-family: "Neuton", serif;
+    font-weight: 400;
 }
 
 .container{
@@ -74,11 +75,12 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: "IBM Plex Serif", serif;
     display: block;
     padding: 15px 30px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
     white-space: nowrap;
 }
@@ -188,23 +190,25 @@ nav .dropdown {
 }
 
 .hero .container {
+
     position: relative;
     z-index: 2;
-    padding: 20px;
+    padding: 80px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 .hero .btn {
-    background-color: #10487c;
+    background-color: #FF9900;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -214,7 +218,7 @@ nav .dropdown {
 }
 
 .hero .btn:hover {
-    background-color: #2c70af;
+    background-color: #f1b65c;
 }
 
 .btn {
@@ -239,17 +243,19 @@ nav .dropdown {
     box-sizing: border-box; /* Ensure padding is included in the width */
     color: #052E54;
     background-image: url('images/background.png');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
 }
 
-.about .wrapped{
+.about .wrapped {
     width: 80%;
     display: flex;
     margin: auto;
     align-items: center;
 }
 
-.about .keys{
+.about .keys {
     width: 100%;
     max-width: 200px;
 }
@@ -268,15 +274,17 @@ nav .dropdown {
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 24px;
     color: #727272;
 }
 
 @media (max-width: 768px) {
-    .about .wrapped{
+    .about .wrapped {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%; /* Ensure wrapped takes full width on small screens */
+        margin: auto; /* Center it horizontally */
     }
 
     .about img {
@@ -287,11 +295,14 @@ nav .dropdown {
     }
 
     .about .container {
+        margin: 20px auto;
         flex: 1;
-        width: 100%;
+        width: 80%; /* Adjust the width to a reasonable percentage */
+        max-width: 600px; /* Keep the max width as it is */
         order: 2;
     }
 }
+
 
 
 /* Services Section */
@@ -299,60 +310,75 @@ nav .dropdown {
     width: 100%;
     padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
-    background-color: #052E54;
-    color: white;
+    color: #052E54;
+    background: url("images/background4.png");
     
 }
 
-.services .wrapped{
-    width: 80%;
-    display: flex;
-    margin: auto;
-    align-items: center;
+.services h2{
+    color: white;
+
 }
+
 
 .services .container{
-    width: 50%;
+    margin: auto;
+    width: 95%;
+}
+
+.services .container2{
+    display: flex;
+}
+
+.services img{
+    height: 80px;
+    width:70px;
+}
+.services h2{
+    font-size: 48px;
+    text-align: center;
+}
+.services h3 {
+    font-size: 30px;
+}
+
+.services p{
+    font-size: 22px;
+    color: #727272;
+}
+
+.services .box {
+    background-color: aliceblue;
     border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 33%;
 }
 
-.services h2 {
-    font-size: 36px;
-}
+@media (max-width: 1000px) {
 
-.services ul {
-    list-style: none;
-    padding: 0;
-    border-bottom: 3px #052E54;
-}
-
-.services ul li {
-    font-size: 18px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid white;
-}
-
-@media (max-width: 900px) {
-    .services .wrapped {
-        flex-direction: column;
+    .services .container2 {
         align-items: center;
+        display: block;
+        margin: 0 auto;
     }
 
-    .services img {
-        width: 100%;
-        order: 2;
+    .services .box{
+        width: 80%;
+        margin: 20px auto;
     }
-
-    .services .container {
-        width: 100%;
-        order: 1;
+    .services p{
+        font-size: 22px;
     }
 }
 
 /* Quote Section */
 .quote {
-    background-image: url('images/background2.png');
-    background-size: cover;
+    height: 60vh;
+    background-image: url('images/background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
     width: 100%;
     padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
@@ -360,28 +386,22 @@ nav .dropdown {
 
 
 .quote .container{
-    background-image: url('images/murray-rothbard.jpg');
-    background-position: center;
-    border: 1px solid #052E54;
+    height: 100%;
     border-radius: 8px;
-    font-size: 24px;
     text-align: center;
     margin: auto;
     width: 80%;
-    height: 400px;
-    max-width: 600px;
     display: flex; /* Enable Flexbox */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-
+    max-width: 800px;
 }
 
 .quote h2 {
     margin: auto;
     width: 80%;
-    font-size: 24px;
-    color: white;
-    font-style: italic;
+    font-size: 36px;
+    color: #052E54;
 }
 
 /* Footer */
@@ -530,7 +550,7 @@ footer .links a img {
 }
 
 .coming-soon .btn {
-    background-color: #052E54;
+    background-color: #FF9900;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -540,7 +560,7 @@ footer .links a img {
 }
 
 .coming-soon .btn:hover {
-    background-color: #2c70af;
+    background-color: #f1b65c;
 }
 
 .coming-soon .input {
@@ -560,18 +580,22 @@ footer .links a img {
 }
 
 .help {
-    padding: 20px; /* Space around the section */
+    padding: 80px 20px 20px; /* Space around the section with extra top padding for fixed header */
     text-align: center; /* Center the grid container */
     width: 80%;
     margin: auto;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .videos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     gap: 20px; /* Space between thumbnails */
     justify-content: center; /* Center the grid items horizontally */
-    align-items: center; /* Center items vertically */
     margin-bottom: 20px; /* Space between rows of thumbnails */
     max-width: 100%; /* Ensure the grid container doesn’t exceed the width */
     margin-left: auto; /* Center the container horizontally */
@@ -613,7 +637,7 @@ footer .links a img {
 @media (max-width: 900px) {
     .help {
         width: 60%;
-        padding: 20px 10px; /* Add more space on sides and bottom for small screens */
+        padding: 80px 10px 20px; /* Add more space on sides and top padding for fixed header */
     }
 
     .videos {
@@ -627,3 +651,5 @@ footer .links a img {
         max-height: 56.25vw; /* Adjust height based on viewport width to maintain 16:9 aspect ratio */
     }
 }
+
+
