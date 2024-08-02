@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('JavaScript loaded');
-
-    function toggleDropdown() {
-        var content = document.querySelector('.dropdown-content');
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    }    
+    
 
     const links = document.querySelectorAll('a[href^="#"]');
 
@@ -52,4 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('An error occurred. Please try again.');
         });
     });
+
+    
 });
+
+function toggleDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+}
