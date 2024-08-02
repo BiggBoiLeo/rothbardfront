@@ -124,6 +124,7 @@ nav .dropdown-content a {
     align-items: center;
     text-align: center;
     color: white;
+    min-height: 500px;
 }
 
 .hero .overlay {
@@ -132,7 +133,7 @@ nav .dropdown-content a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -149,27 +150,18 @@ nav .dropdown-content a {
     display: inline-block;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    background-color: #FF9900;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
+.hero a{
     text-decoration: none;
+    font-size: 36px;
+    font-family: "Lato", sans-serif;
+    color: #FF9900;
 }
 
-.hero .btn:hover {
-    background-color: #f1b65c;
+.hero a:hover{
+    color: #f1b65c;
 }
 
 .btn {
-    background-color: #10487c;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -323,7 +315,7 @@ nav .dropdown-content a {
 /* Quote Section */
 .quote {
     height: 60vh;
-    background-image: url('images/background.png');
+    background-image: url('images/background2.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top left, bottom right;
