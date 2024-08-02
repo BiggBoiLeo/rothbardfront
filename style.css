@@ -469,6 +469,8 @@ footer .links a {
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+    color: #ccc;
+    text-decoration: none;
 }
 
 footer .links a img {
@@ -651,4 +653,14 @@ footer .links a img {
         max-width: 90%; /* Full width of the container with some padding */
         max-height: 56.25vw; /* Adjust height based on viewport width to maintain 16:9 aspect ratio */
     }
+}
+
+.privacy {
+    padding: 80px;
+    background-color: #093d6e;
+    color: white;
+}
+
+.privacy p, .privacy li, .privacy a{
+    color: #ccc;
 }
