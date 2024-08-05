@@ -1,6 +1,5 @@
 /* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -9,7 +8,8 @@ body {
 }
 
 button{
-    font-family: "Neuton", serif;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
 }
 
 h1,h2, h3, h4, h5, h6{
@@ -19,8 +19,8 @@ h1,h2, h3, h4, h5, h6{
 }
 
 p, a{
-    font-family: "Neuton", serif;
-    font-weight: 400;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
 }
 
 .container{
@@ -31,7 +31,6 @@ p, a{
 header {
     background-color: #052E54;
     padding: 20px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,7 +110,6 @@ nav .dropdown-content a {
 /* Hero Section */
 .hero {
     width: 100%;
-    padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
     position: relative;
     height: 60vh;
@@ -119,12 +117,8 @@ nav .dropdown-content a {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: white;
-    min-height: 500px;
+    
 }
 
 .hero .overlay {
@@ -133,15 +127,18 @@ nav .dropdown-content a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
 .hero .container {
-
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 100%;
     position: relative;
     z-index: 2;
-    padding: 80px;
+    margin: auto;
 }
 
 .hero h1 {
@@ -171,20 +168,127 @@ nav .dropdown-content a {
 @media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
-        height: auto;
+        height: 60vh;
     }
 }
+
+.takeaction {
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+}
+
+.takeaction .title {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #052E54;
+}
+
+.title h2 {
+    display: flex;
+    align-items: center;
+}
+
+.takeaction .wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.takeaction .wrapper .info {
+    flex: 1 1 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.takeaction .wrapper .info h3,
+.takeaction .wrapper .info p,
+.takeaction .wrapper .info a {
+    text-align: center;
+}
+
+.takeaction .wrapper .info a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #052E54;
+    font-size: 16px;
+}
+
+.takeaction .wrapper .info .infopic {
+    width: 100%;
+    max-height: 100%;
+}
+
+.takeaction .wrapper a img {
+    max-height: 40px;
+    margin-left: 10px;
+}
+
+.takeaction .wrapper .info a:hover {
+    color: #FF9900;
+}
+
+.infopicv {
+    display: none; /* Hide variant images by default */
+}
+
+@media (max-width: 1075px) {
+    .takeaction .wrapper {
+        flex-direction: column;
+    }
+    .infopic {
+        display: none; /* Hide original images */
+    }
+
+    .infopicv {
+        display: block; /* Show variant images */
+    }
+}
+
+.takeaction span {
+    color: #FF9900;
+}
+
+.takeaction span:before {
+    content: ' ';
+    animation: animate infinite 6s;
+    margin-left: 6px;
+}
+
+@keyframes animate {
+    0% {
+        content: 'Secure';
+    }
+    33% {
+        content: 'Trustless';
+    }
+    66% {
+        content: 'Accessible';
+    }
+    100% {
+        content: 'Empowering';
+    }
+}
+
 
 /* About Section */
 .about {
     width: 100%;
-    padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
     color: #052E54;
-    background-image: url('images/background.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top left, bottom right;
+    background-color: #f7f7f7;
+    padding-top: 30px;
 }
 
 .about .wrapped {
@@ -201,21 +305,26 @@ nav .dropdown-content a {
 }
 
 .about .container {
-    border: 3px solid #052E54;
-    background-color: white;
     padding: 20px;
     width: 100%;
     border-radius: 10px;
     max-width: 600px;
 }
 
-.about h2 {
-    font-size: 36px;
+.about h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.about h2{
+    font-size: 40px;
+}
+.about h3{
+    font-size:19px;
 }
 
 .about p {
-    font-size: 24px;
-    color: #727272;
+    color: black;
 }
 
 @media (max-width: 768px) {
@@ -237,8 +346,8 @@ nav .dropdown-content a {
     .about .container {
         margin: 20px auto;
         flex: 1;
-        width: 80%; /* Adjust the width to a reasonable percentage */
-        max-width: 600px; /* Keep the max width as it is */
+        width: 80%; /* Adjust the width t\o a reasonable percentage */
+        max-width: 600px; /* Keep the max\ width as it is */
         order: 2;
     }
 }
@@ -251,87 +360,81 @@ nav .dropdown-content a {
     padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
     color: #052E54;
-    background: url("images/background4.png");
-    
+    background-color: #f7f7f7;
 }
 
-.services h2{
-    color: white;
-
-}
-
-
-.services .container{
+.services .container {
     margin: auto;
     width: 95%;
-}
-
-.services .container2{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px; /* Fixed gap between boxes when horizontal */
 }
 
-.services img{
-    height: 80px;
-    width:70px;
-}
-.services h2{
+.services h2 {
     font-size: 48px;
     text-align: center;
 }
-.services h3 {
-    font-size: 30px;
-}
-
-.services p{
-    font-size: 22px;
-    color: #727272;
-}
 
 .services .box {
-    background-color: aliceblue;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px;
-    width: 33%;
+    max-width: 300px;
+    flex: 1 1 300px; /* Grow and shrink as needed, with a base width of 300px */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0; /* Adjust margin to control vertical spacing when stacked */
 }
 
-@media (max-width: 1000px) {
+.services .image-container {
+    width: 300px;
+    height: 400px;
+    overflow: hidden; /* This will hide the parts of the image that go outside the container */
+    position: relative; /* This will help in centering the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .services .container2 {
-        align-items: center;
-        display: block;
-        margin: 0 auto;
+.services .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will prevent image distortion */
+}
+
+@media (max-width: 1150px) {
+    
+
+    .services .box {
+        max-width: 100%; /* Take full width of the container on smaller screens */
     }
 
-    .services .box{
-        width: 80%;
-        margin: 20px auto;
-    }
-    .services p{
-        font-size: 22px;
+    .services .box p {
+        max-width: 300px; /* Limit text width to 300px */
     }
 }
+
+
+
+
 
 /* Quote Section */
 .quote {
-    height: 60vh;
-    background-image: url('images/background2.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top left, bottom right;
+    padding-bottom: 50px;
+    background-color: white;
     width: 100%;
-    padding: 50px 0;
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 
 .quote .container{
     height: 100%;
-    border-radius: 8px;
     text-align: center;
     margin: auto;
     width: 80%;
-    display: flex; /* Enable Flexbox */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     max-width: 800px;
@@ -342,6 +445,10 @@ nav .dropdown-content a {
     width: 80%;
     font-size: 36px;
     color: #052E54;
+}
+
+.quote .quotation{
+    max-width: 70px;
 }
 
 /* Footer */
@@ -379,8 +486,6 @@ footer ul {
 }
 
 footer ul li {
-    border: 1px solid white;
-    border-radius: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -443,28 +548,21 @@ footer .links a img {
 /* Coming Soon Section */
 .coming-soon {
     width: 100%;
-    padding: 50px 0;
     box-sizing: border-box; /* Ensure padding is included in the width */
-    background-image: url('images/background3.png');
-    background-size:cover;
+    background-color: #e7e7e7;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    height: 80vh;
+    color: #052E54;
+    height: auto;
+    max-height: 80vh;
     position: relative;
+
 }
 
-.coming-soon .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: 1;
+.coming-soon img{
+    max-height: 80vh;
+    height: 100%;
+    margin-left: auto;
 }
-
 .coming-soon .content {
     border-radius: 20px;
     width: 60%;
@@ -476,9 +574,9 @@ footer .links a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #093d6e;
-    color: white;
+    color: #052E54;
     max-width: 600px;
+    margin: auto;
 }
 
 .coming-soon .content h1 {
@@ -488,7 +586,7 @@ footer .links a img {
 .coming-soon .content p {
     font-size: 24px;
     width: 70%;
-    color: #ccc
+    color: #10487c;
 }
 
 .coming-soon .btn {
@@ -506,7 +604,8 @@ footer .links a img {
 }
 
 .coming-soon .input {
-    border:2px solid #052E54;
+    border:1px solid #052E54;
+    background-color: white;
     color: #052E54;
     padding: 10px 20px;
     border: none;
@@ -515,9 +614,29 @@ footer .links a img {
     text-decoration: none;
     margin-right: -4
 }
-@media (max-width: 768px) {
-    .coming-soon .content{
-        width: 80%;
+
+@media (max-width: 1400px) {
+    .coming-soon{
+        flex-direction: column;
+        height: 80vh;
+        max-height: none;
+        background-image: url('images/landing.jpg');
+        background-size:cover;
+        background-repeat: none;
+        background-position: center;
+    }
+
+    .coming-soon img{
+        display: none;
+    }
+    .coming-soon .content p{
+        color: #f7f7f7;
+    }
+    .coming-soon .content h1{
+        color: white;
+    }
+    .coming-soon span{
+        color: #FF9900;
     }
 }
 
@@ -596,10 +715,10 @@ footer .links a img {
 
 .privacy {
     padding: 80px;
-    background-color: #093d6e;
-    color: white;
+    background-color: white;
+    color: #052E54;
 }
 
 .privacy p, .privacy li, .privacy a{
-    color: #ccc;
+    color: #093d6e;
 }
