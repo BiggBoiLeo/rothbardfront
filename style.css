@@ -186,7 +186,7 @@ nav .dropdown-content a {
     color: #052E54;
 }
 
-.title h2 {
+.takeaction .title h2 {
     display: flex;
     align-items: center;
 }
@@ -325,6 +325,7 @@ nav .dropdown-content a {
 
 .about p {
     color: black;
+    width: 400px;
 }
 
 @media (max-width: 768px) {
@@ -419,7 +420,93 @@ nav .dropdown-content a {
 }
 
 
+/* Customer Testimonials */
 
+.sliding  {
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+  }
+
+  .sliding h1{
+    text-align: center;
+    font-size: 40px;
+    color: #052E54;
+  }
+  
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .sliding .logos {
+    width: 80%;
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    margin: auto;
+  }
+  
+  .sliding .logos:before,
+  .sliding .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .sliding .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .sliding .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .sliding .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .sliding .logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .sliding .logos-slide .container {
+    margin: 0 20px;
+    padding: 20px;
+    display: inline-block;
+    background-color: #f7f7f7;
+    box-shadow: #052E54 3px 3px 5px;
+    border-radius: 15px;
+    height: 20vh;
+    min-width: 30vw;
+    text-align: center;
+    
+  }
+
+  .sliding .logos .logos-slide .container h2{
+    color: #052E54;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .sliding .logos-slide .container{
+        width: fit-content;
+    }
+  }
 
 
 /* Quote Section */
@@ -612,7 +699,7 @@ footer .links a img {
     border-radius: 5px;
     font-size: 18px;
     text-decoration: none;
-    margin-right: -4
+    margin-right: -4px;
 }
 
 @media (max-width: 1400px) {
