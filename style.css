@@ -263,7 +263,7 @@ nav .dropdown-content a {
 
 .takeaction span:before {
     content: ' ';
-    animation: animate infinite 6s;
+    animation: animate infinite 8s;
     margin-left: 6px;
 }
 
@@ -271,14 +271,17 @@ nav .dropdown-content a {
     0% {
         content: 'Secure';
     }
-    33% {
+    25% {
         content: 'Trustless';
     }
-    66% {
+    50% {
         content: 'Accessible';
     }
-    100% {
+    75% {
         content: 'Empowering';
+    }
+    100%{
+        content: 'Secure';
     }
 }
 
