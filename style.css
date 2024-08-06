@@ -92,8 +92,9 @@ nav .dropdown-content {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
-    width: 50%;
-    border-radius: 3px;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
     top: 100%; /* Position the dropdown below the button */
 }
 
