@@ -443,7 +443,7 @@ nav .dropdown-content a {
   }
   
   .sliding .logos {
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     padding: 60px 0;
     background: white;
@@ -471,16 +471,24 @@ nav .dropdown-content a {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   }
-  
+  /*
   .sliding .logos:hover .logos-slide {
     animation-play-state: paused;
   }
-  
+  */
   .sliding .logos-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
   }
-  
+  .sliding .logos-slide h1{
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 6rem;
+  }
+  .sliding .logos-slide h1 span{
+    color: #FF9900;
+  }
+  /* save for customer testimonials
   .sliding .logos-slide .container {
     margin: 0 20px;
     padding: 20px;
@@ -497,7 +505,7 @@ nav .dropdown-content a {
   .sliding .logos .logos-slide .container h2{
     color: #052E54;
     font-size: 3rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     .sliding .logos-slide .container{
