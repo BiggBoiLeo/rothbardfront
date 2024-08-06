@@ -7,6 +7,11 @@ body {
     width: 100%;
 }
 
+::selection {
+    background: #FF9900;
+    color: #052E54;
+  }
+
 button{
     font-family: "Fira Sans", sans-serif;
     font-weight: 300;
