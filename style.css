@@ -268,7 +268,7 @@ nav .dropdown-content a {
 
 @media (max-width: 768px){
     .takeaction .title{
-        font-size: 1rem;
+        font-size: 3vw;
     }
 }
 
